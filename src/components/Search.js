@@ -1,8 +1,15 @@
-import React from "react";
+import React, {useState} from "react";
 
-function Search() {
+function Search({onSearch}) {
+  const [search, setSearch] = useState("")
+
+  function handleChange(event){
+    setSearch(event.target.value)
+    onSearch(search)
+  }
+
   return (
-    <div className="ui large fluid icon input">
+    <div onChange={handleChange} className="ui large fluid icon input">
       <input
         type="text"
         placeholder="Search your Recent Transactions"
