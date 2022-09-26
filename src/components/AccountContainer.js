@@ -28,7 +28,7 @@ function AccountContainer() {
   }
 
   function handleOnSearch(search) {
-    if (search === {}) {
+    if (search === "") {
       fetchTransaction(transactions);
     } else {
       setTransactions((transactions) =>

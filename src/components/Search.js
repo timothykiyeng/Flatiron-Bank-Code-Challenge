@@ -4,8 +4,8 @@ function Search({onSearch}) {
   const [search, setSearch] = useState("")
 
   function handleChange(event){
-    setSearch(event.target.value)
-    onSearch(search)
+    onSearch(event.target.value)
+    setSearch(search)
   }
 
   return (
